@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Home from './Home';
-import CreateRoom from './CreateRoom';
-import RoomJoin from './RoomJoin';
+import Navbar from './Navbar';
+import Main from './Main';
 import {  
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
+  BrowserRouter as Router} from "react-router-dom";
 
 export default class App extends Component {
     constructor(props) {
@@ -16,14 +12,15 @@ export default class App extends Component {
     state = {  }
     render() { 
         return (
-            <Router>
-                <Routes>
-                    <Route path='/' element={<Home /> }/>
-                    <Route path='/create' element={<CreateRoom /> }/>
-                    <Route path='/join' element={<RoomJoin /> }/>
-                </Routes>
-            </Router>            
-            );
+            <div>
+                <Navbar/>            
+                <Router>
+                    <div class="container">
+                    <Main />
+                    </div>
+                </Router>            
+            </div>
+        );
     }
 }
 render(<App/>, document.getElementById('app'))
