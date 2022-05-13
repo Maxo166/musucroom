@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Home from './Home'
 import CreateRoom from './CreateRoom';
 import RoomJoin from './RoomJoin';
-import {  
+import { 
+    BrowserRouter as Router, 
   Routes,
   Route
 } from "react-router-dom";
